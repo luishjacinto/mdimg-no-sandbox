@@ -129,7 +129,7 @@ async function convert2img({
       width,
       height,
     },
-    args: [`--window-size=${width},${height}`],
+    args: [`--window-size=${width},${height}`, '--no-sandbox', '--disable-setuid-sandbox'],
     ...puppeteerProps,
   });
   const _page = await _browser.newPage();
